@@ -1,0 +1,7 @@
+<div class="row">
+<div class="col-xs-12">
+<app-individual *ngFor="let personIndex of people; let i = index"
+[person]="personIndex"
+[id]="i"></app-individual>
+</div>
+</div>

@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="person.imagePath" alt="" class="img-responsive">
+  </div>
+
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+<h1>{{ person.name }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+<div class="col-xs-12">
+{{ person.description }}
+</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group">
+        <button class="btn btn-success" (click) = "onAddItem()">Add New Item</button>
+        <button class="btn btn-danger" (click) = "onDelete()">Delete This Item</button>
+    </div>
+  </div>
+</div>

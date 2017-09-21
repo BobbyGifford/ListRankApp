@@ -1,0 +1,18 @@
+<a 
+style="cursor: pointer;"
+[routerLink]="[id]"
+class="list-group-item clearfix"
+routerLinkActive="active"
+>
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">Name: {{ person.name }}</h4>
+    <p class="list-group-item-text">Description: {{ person.description}}</p>
+    <p class="list-group-item-text">Rating: {{ person.rating }}/5</p>
+  </div>
+  <span class="pull-right">
+    <img [src]="person.imagePath" 
+    alt="{{ person.name }}" 
+    class="img-responsive" 
+    style="max-height: 70px;">
+  </span>
+</a>

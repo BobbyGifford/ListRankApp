@@ -1,0 +1,54 @@
+<div class="row border">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <div class="row">
+        <div class="col-md-12 form-group">
+
+          <label for="name">Name</label>
+          <input type="text" id="name" class="form-control"
+          name="name"
+          ngModel
+          required>
+
+          <label for="description">Description</label>
+          <input type="text" id="description" class="form-control"
+          name="description"
+          required
+          ngModel>
+
+          <label>Please leave a rating out of 5 *</label>
+          <div class="radio" *ngFor="let grade of rating">
+          <label>
+            <input
+            type="radio"
+            name="rating"
+            ngModel
+            [value]="grade"
+            required>
+            {{ grade }}
+          </label>
+            </div>
+
+          <label for="imgPath">Image (URL)</label>
+          <h6>Type NA if not applicable</h6>
+          <input type="text" id="imgPath" class="form-control"
+          name="imgPath"
+          ngModel
+          required>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" type="submit"
+          [disabled]="!form.valid">Add</button>
+          <button class="btn btn-primary" type="button"
+          (click)="reset(form)">
+          Reset
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
